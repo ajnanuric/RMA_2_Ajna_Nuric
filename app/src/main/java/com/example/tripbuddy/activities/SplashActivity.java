@@ -1,4 +1,4 @@
-package com.example.gymsphere.activities;
+package com.example.tripbuddy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gymsphere.R;
-
+import com.example.tripbuddy.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
 
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
 

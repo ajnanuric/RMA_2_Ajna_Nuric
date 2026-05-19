@@ -1,4 +1,4 @@
-package com.example.gymsphere.activities;
+package com.example.tripbuddy.activities;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.gymsphere.R;
+import com.example.tripbuddy.R;
 
 public class MainActivity extends AppCompatActivity {
 

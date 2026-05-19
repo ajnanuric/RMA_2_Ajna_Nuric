@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GymSphere"
+rootProject.name = "TripBuddy"
 include ':app'

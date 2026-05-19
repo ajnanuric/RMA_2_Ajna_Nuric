@@ -1,4 +1,4 @@
-package com.example.gymsphere;
+package com.example.tripbuddy;
 
 import org.junit.Test;
 
