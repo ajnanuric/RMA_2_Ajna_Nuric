@@ -13,70 +13,60 @@
         android:padding="24dp">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:src="@drawable/bear_login"
             android:scaleType="fitCenter"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome back ✈️"
+            android:text="Create account 💕"
             android:textColor="#222222"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login to continue your adventures"
-            android:textColor="#888888"
-            android:textSize="16sp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="30dp"/>
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_background"
+            android:hint="Full name"
+            android:padding="16dp"/>
 
         <EditText
-            android:id="@+id/editEmail"
+            android:id="@+id/editRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/input_background"
             android:hint="Email"
-            android:padding="16dp"
-            android:textColor="#000000"
-            android:textColorHint="#999999"/>
+            android:padding="16dp"/>
 
         <EditText
-            android:id="@+id/editPassword"
+            android:id="@+id/editRegisterPassword"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/input_background"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="16dp"
-            android:textColor="#000000"
-            android:textColorHint="#999999"/>
+            android:padding="16dp"/>
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:backgroundTint="#E75480"
-            android:text="Login"
+            android:text="Register"
             android:textAllCaps="false"
             android:textSize="18sp"
             android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/textRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account? Register"
-            android:textColor="#E75480"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
 
 </ScrollView>
