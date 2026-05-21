@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget Planner 💰"
+            android:textColor="#222222"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/editFlights"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_background"
+            android:hint="Flights"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editHotels"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_background"
+            android:hint="Hotels"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editFood"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_background"
+            android:hint="Food"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editActivities"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/input_background"
+            android:hint="Activities"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/buttonCalculateBudget"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:backgroundTint="#E75480"
+            android:text="Calculate"
+            android:textAllCaps="false"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
