@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.tripbuddy.fragments.HomeFragment"
+        android:label="home" />
+
+    <fragment
+        android:id="@+id/tripsFragment"
+        android:name="com.example.tripbuddy.fragments.TripsFragment"
+        android:label="trips" />
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.example.tripbuddy.fragments.ShopFragment"
+        android:label="shop" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tripbuddy.fragments.ProfileFragment"
+        android:label="profile" />
+
+</navigation>
