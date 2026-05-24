@@ -2,350 +2,263 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profileLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF5F7">
+    android:background="@drawable/profile_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#C93F73"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/buttonDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Toggle Dark Mode 🌙"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5C9A"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Switch
+            android:id="@+id/switchDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Dark Mode"
+            android:textColor="#B03060"
+            android:textStyle="bold"
+            android:thumbTint="#FF5C9A"
+            android:trackTint="#FFC5DA"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"/>
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/bear_login" />
+            android:src="@drawable/bear_login"/>
 
         <TextView
             android:id="@+id/textUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
-            android:text="user@gmail.com"
-            android:textColor="#222222"
+            android:text="tripbuddy@gmail.com"
+            android:textColor="#B03060"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Settings ⚙️"
-            android:textColor="#222222"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+        <!-- EDIT PROFILE -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/editProfileCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
+            android:layout_height="90dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="22dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFDDEB"
+                android:layout_height="match_parent"
+                android:background="#FFF6FA"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="20dp">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dark Mode"
-                        android:textColor="#222222"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Enable dark appearance"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/switchDarkMode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#DFF4FF"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:tint="#FF5C9A"/>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Notifications"
-                        android:textColor="#222222"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Travel reminders"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/switchNotifications"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#E7E3FF"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Language"
-                    android:textColor="#222222"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Spinner
-                    android:id="@+id/spinnerLanguage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFE4EF"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginStart="18dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Edit Profile"
-                        android:textColor="#222222"
+                        android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textColor="#222222"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Change your personal information"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:text="Update your personal information"
+                        android:textColor="#777777"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/buttonEditProfile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit"
-                    android:textAllCaps="false" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
+        <!-- ABOUT -->
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/aboutCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
+            android:layout_height="90dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="22dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#EBDFFF"
+                android:layout_height="match_parent"
+                android:background="#FFF6FA"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="20dp">
 
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:tint="#FF5C9A"/>
+
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginStart="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About TripBuddy"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222222"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Learn more about TripBuddy"
+                        android:textColor="#777777"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- PASSWORD -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/passwordCard"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF6FA"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_lock_lock"
+                    android:tint="#FF5C9A"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="18dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Change Password"
-                        android:textColor="#222222"
+                        android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textColor="#222222"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:text="Update your account password"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:textColor="#777777"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/buttonPassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Change"
-                    android:textAllCaps="false" />
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
+        <!-- LOGOUT -->
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/logoutCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
+            android:layout_height="90dp"
+            app:cardCornerRadius="22dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFEED9"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="About TripBuddy"
-                    android:textColor="#222222"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="TripBuddy helps travelers organize trips, budgets, packing lists and travel plans in one place ✈️"
-                    android:textColor="#666666"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFDDEB"
+                android:layout_height="match_parent"
+                android:background="#FFF6FA"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="20dp">
 
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_lock_power_off"
+                    android:tint="#FF5C9A"/>
+
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginStart="18dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Logout"
-                        android:textColor="#222222"
+                        android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textColor="#222222"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Sign out from account"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:text="Sign out from your account"
+                        android:textColor="#777777"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/buttonLogout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Logout"
-                    android:textAllCaps="false" />
 
             </LinearLayout>
 
