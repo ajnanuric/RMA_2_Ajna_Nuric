@@ -8,8 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.tripbuddy.R;
+import com.example.tripbuddy.viewmodel.AuthViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -19,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText editEmail, editPassword;
 
-    FirebaseAuth auth;
+    AuthViewModel authViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         editEmail = findViewById(R.id.editEmail);
         editPassword = findViewById(R.id.editPassword);
 
-        auth = FirebaseAuth.getInstance();
+        authViewModel = new ViewModelProvider(this)
+                .get(AuthViewModel.class);
 
         buttonLogin.setOnClickListener(v -> {
 
@@ -45,20 +48,29 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            auth.signInWithEmailAndPassword(email, password)
+            authViewModel.login(email, password);
+
+            FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
 
                         if(task.isSuccessful()) {
 
-                            Toast.makeText(this, "Login uspješan", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this,
+                                    "Login uspješan",
+                                    Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            Intent intent = new Intent(
+                                    LoginActivity.this,
+                                    MainActivity.class);
+
                             startActivity(intent);
                             finish();
 
                         } else {
 
-                            Toast.makeText(this, "Pogrešan email ili password",
+                            Toast.makeText(this,
+                                    "Pogrešan email ili password",
                                     Toast.LENGTH_LONG).show();
                         }
 
@@ -68,7 +80,10 @@ public class LoginActivity extends AppCompatActivity {
 
         textRegister.setOnClickListener(v -> {
 
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(
+                    LoginActivity.this,
+                    RegisterActivity.class);
+
             startActivity(intent);
 
         });
