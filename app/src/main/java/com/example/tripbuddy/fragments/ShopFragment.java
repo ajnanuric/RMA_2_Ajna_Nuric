@@ -49,12 +49,42 @@ public class ShopFragment extends Fragment {
 
         productList = new ArrayList<>();
 
-        productList.add(new Product("E-SIM", "Stay connected while traveling"));
-        productList.add(new Product("Gift Card", "Perfect gift for travelers"));
-        productList.add(new Product("Suitcase", "Travel in style"));
-        productList.add(new Product("Travel Pillow", "Comfort on long flights"));
-        productList.add(new Product("Backpack", "Carry your essentials"));
-        productList.add(new Product("Power Bank", "Charge anywhere"));
+        productList.add(new Product(
+                "E-SIM",
+                "Stay connected while traveling",
+                "19€",
+                R.drawable.esim));
+
+        productList.add(new Product(
+                "Gift Card",
+                "Perfect gift for travelers",
+                "50€",
+                R.drawable.giftcard));
+
+        productList.add(new Product(
+                "Suitcase",
+                "Travel in style",
+                "120€",
+                R.drawable.suitcase));
+
+        productList.add(new Product(
+                "Travel Pillow",
+                "Comfort on long flights",
+                "25€",
+                R.drawable.pillow));
+
+        productList.add(new Product(
+                "Backpack",
+                "Carry your essentials",
+                "80€",
+                R.drawable.backpack));
+
+        productList.add(new Product(
+                "Power Bank",
+                "Charge anywhere",
+                "40€",
+                R.drawable.powerbank));
+
 
         filteredList = new ArrayList<>(productList);
 

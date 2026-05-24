@@ -3,6 +3,7 @@ package com.example.tripbuddy.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,6 +39,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         holder.textTitle.setText(product.getTitle());
         holder.textDescription.setText(product.getDescription());
+        holder.textPrice.setText(product.getPrice());
+        holder.imageProduct.setImageResource(product.getImage());
     }
 
     @Override
@@ -47,13 +50,17 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textTitle, textDescription;
+        TextView textTitle, textDescription, textPrice;
+
+        ImageView imageProduct;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textTitle = itemView.findViewById(R.id.textTitle);
             textDescription = itemView.findViewById(R.id.textDescription);
+            textPrice = itemView.findViewById(R.id.textPrice);
+            imageProduct = itemView.findViewById(R.id.imageProduct);
         }
     }
 }

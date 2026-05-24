@@ -12,11 +12,18 @@ import com.example.tripbuddy.R;
 
 public class BudgetActivity extends AppCompatActivity {
 
-    EditText editFlights, editHotels, editFood, editActivities;
+    EditText editFlights,
+            editHotels,
+            editFood,
+            editActivities;
 
     Button buttonCalculateBudget;
 
-    TextView textBudget;
+    TextView textBudget,
+            textFlightsResult,
+            textHotelsResult,
+            textFoodResult,
+            textActivitiesResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,19 +35,41 @@ public class BudgetActivity extends AppCompatActivity {
         editFood = findViewById(R.id.editFood);
         editActivities = findViewById(R.id.editActivities);
 
-        buttonCalculateBudget = findViewById(R.id.buttonCalculateBudget);
+        buttonCalculateBudget =
+                findViewById(R.id.buttonCalculateBudget);
 
         textBudget = findViewById(R.id.textBudget);
 
+        textFlightsResult =
+                findViewById(R.id.textFlightsResult);
+
+        textHotelsResult =
+                findViewById(R.id.textHotelsResult);
+
+        textFoodResult =
+                findViewById(R.id.textFoodResult);
+
+        textActivitiesResult =
+                findViewById(R.id.textActivitiesResult);
+
         buttonCalculateBudget.setOnClickListener(v -> {
 
-            String flights = editFlights.getText().toString();
-            String hotels = editHotels.getText().toString();
-            String food = editFood.getText().toString();
-            String activities = editActivities.getText().toString();
+            String flights =
+                    editFlights.getText().toString();
 
-            if(flights.isEmpty() || hotels.isEmpty()
-                    || food.isEmpty() || activities.isEmpty()) {
+            String hotels =
+                    editHotels.getText().toString();
+
+            String food =
+                    editFood.getText().toString();
+
+            String activities =
+                    editActivities.getText().toString();
+
+            if(flights.isEmpty()
+                    || hotels.isEmpty()
+                    || food.isEmpty()
+                    || activities.isEmpty()) {
 
                 Toast.makeText(this,
                         "Unesite sve podatke",
@@ -49,12 +78,25 @@ public class BudgetActivity extends AppCompatActivity {
                 return;
             }
 
-            int total = Integer.parseInt(flights)
-                    + Integer.parseInt(hotels)
-                    + Integer.parseInt(food)
-                    + Integer.parseInt(activities);
+            int total =
+                    Integer.parseInt(flights)
+                            + Integer.parseInt(hotels)
+                            + Integer.parseInt(food)
+                            + Integer.parseInt(activities);
 
-            textBudget.setText("Total Budget: " + total + "€");
+            textBudget.setText(total + "€");
+
+            textFlightsResult.setText(
+                    "✈ Flights: " + flights + "€");
+
+            textHotelsResult.setText(
+                    "🏨 Hotels: " + hotels + "€");
+
+            textFoodResult.setText(
+                    "🍔 Food: " + food + "€");
+
+            textActivitiesResult.setText(
+                    "🎯 Activities: " + activities + "€");
 
         });
     }
