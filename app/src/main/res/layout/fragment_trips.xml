@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF5F7">
+    android:background="@drawable/trips_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,15 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Plan Trip ✈️"
-            android:textColor="#222222"
-            android:textSize="32sp"
+            android:textColor="#B03060"
+            android:textSize="34sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="28dp"/>
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2">
+
+            <!-- BUDGET -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardBudget"
@@ -38,14 +41,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFDDEB"
+                    android:background="#FAD7E5"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_budget"/>
+                        android:src="@drawable/ic_budget"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -68,6 +72,8 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- PACKING -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardPacking"
                 android:layout_width="0dp"
@@ -80,14 +86,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFEED9"
+                    android:background="#FFF0D9"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_packing"/>
+                        android:src="@drawable/ic_packing"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -110,6 +117,8 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- FLIGHTS -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardFlights"
                 android:layout_width="0dp"
@@ -129,7 +138,8 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_flight"/>
+                        android:src="@drawable/ic_flight"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,6 +162,8 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- HOTELS -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardHotels"
                 android:layout_width="0dp"
@@ -164,14 +176,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#E7E3FF"
+                    android:background="#ECE5FF"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_hotel"/>
+                        android:src="@drawable/ic_hotel"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -194,6 +207,8 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- NOTES -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardNotes"
                 android:layout_width="0dp"
@@ -213,7 +228,8 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_notes"/>
+                        android:src="@drawable/ic_notes"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -236,6 +252,8 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- DOCUMENTS -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardDocuments"
                 android:layout_width="0dp"
@@ -248,14 +266,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFF1D6"
+                    android:background="#FFF3DA"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_documents"/>
+                        android:src="@drawable/ic_documents"
+                        android:tint="#FF5C9A"/>
 
                     <TextView
                         android:layout_width="wrap_content"

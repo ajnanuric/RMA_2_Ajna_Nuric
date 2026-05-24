@@ -7,8 +7,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.tripbuddy.R;
+import com.example.tripbuddy.viewmodel.AuthViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -16,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText editName, editRegisterEmail, editRegisterPassword;
     Button buttonRegister;
 
-    FirebaseAuth auth;
+    AuthViewModel authViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,8 @@ public class RegisterActivity extends AppCompatActivity {
         editRegisterPassword = findViewById(R.id.editRegisterPassword);
         buttonRegister = findViewById(R.id.buttonRegister);
 
-        auth = FirebaseAuth.getInstance();
+        authViewModel = new ViewModelProvider(this)
+                .get(AuthViewModel.class);
 
         buttonRegister.setOnClickListener(v -> {
 
@@ -37,29 +40,43 @@ public class RegisterActivity extends AppCompatActivity {
 
             if(email.isEmpty() || password.isEmpty()) {
 
-                Toast.makeText(this, "Unesite podatke", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,
+                        "Unesite podatke",
+                        Toast.LENGTH_SHORT).show();
+
                 return;
             }
 
-            auth.createUserWithEmailAndPassword(email, password)
+            authViewModel.register(email, password);
+
+            FirebaseAuth.getInstance()
+                    .createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
 
                         if(task.isSuccessful()) {
 
-                            Toast.makeText(this, "Registracija uspješna", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this,
+                                    "Registracija uspješna",
+                                    Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                            Intent intent = new Intent(
+                                    RegisterActivity.this,
+                                    MainActivity.class);
+
                             startActivity(intent);
                             finish();
 
                         } else {
 
-                            Toast.makeText(this, "Greška: " + task.getException().getMessage(),
+                            Toast.makeText(this,
+                                    "Greška: " +
+                                            task.getException().getMessage(),
                                     Toast.LENGTH_LONG).show();
                         }
 
                     });
 
         });
+
     }
 }
