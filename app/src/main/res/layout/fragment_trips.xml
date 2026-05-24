@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="Plan Trip ✈️"
             android:textColor="#222222"
-            android:textSize="30sp"
+            android:textSize="32sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"/>
 
@@ -29,22 +29,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardBudget"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#FFDDEB"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_budget"/>
 
                     <TextView
@@ -54,7 +54,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Track expenses"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 
@@ -63,22 +71,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardPacking"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#FFEED9"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_packing"/>
 
                     <TextView
@@ -88,7 +96,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel essentials"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 
@@ -97,22 +113,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardFlights"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#DFF4FF"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_flight"/>
 
                     <TextView
@@ -122,7 +138,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flight planner"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 
@@ -131,22 +155,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardHotels"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#E7E3FF"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_hotel"/>
 
                     <TextView
@@ -156,7 +180,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stay organized"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 
@@ -165,22 +197,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardNotes"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#DFFFE5"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_notes"/>
 
                     <TextView
@@ -190,7 +222,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Important reminders"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 
@@ -199,22 +239,22 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardDocuments"
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardCornerRadius="28dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFE6EF"
+                    android:background="#FFF1D6"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/ic_documents"/>
 
                     <TextView
@@ -224,7 +264,15 @@
                         android:textColor="#222222"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel papers"
+                        android:textColor="#666666"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
 
                 </LinearLayout>
 

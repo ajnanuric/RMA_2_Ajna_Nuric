@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF5F7">
@@ -9,71 +10,144 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="24dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Budget Planner 💰"
             android:textColor="#222222"
-            android:textSize="30sp"
+            android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="28dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#FFFFFF"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Budget"
+                    android:textColor="#888888"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textBudget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0€"
+                    android:textColor="#E75480"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <EditText
             android:id="@+id/editFlights"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="12dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="14dp"
             android:background="@drawable/input_background"
             android:hint="Flights"
-            android:padding="16dp"/>
+            android:padding="18dp"
+            android:textSize="16sp"/>
 
         <EditText
             android:id="@+id/editHotels"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="12dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="14dp"
             android:background="@drawable/input_background"
             android:hint="Hotels"
-            android:padding="16dp"/>
+            android:padding="18dp"
+            android:textSize="16sp"/>
 
         <EditText
             android:id="@+id/editFood"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="12dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="14dp"
             android:background="@drawable/input_background"
             android:hint="Food"
-            android:padding="16dp"/>
+            android:padding="18dp"
+            android:textSize="16sp"/>
 
         <EditText
             android:id="@+id/editActivities"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/input_background"
             android:hint="Activities"
-            android:padding="16dp"/>
+            android:padding="18dp"
+            android:textSize="16sp"/>
 
         <Button
             android:id="@+id/buttonCalculateBudget"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="58dp"
             android:backgroundTint="#E75480"
-            android:text="Calculate"
+            android:text="Calculate Budget"
             android:textAllCaps="false"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"/>
 
-        <TextView
-            android:id="@+id/textBudget"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#222222"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"/>
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/textFlightsResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✈ Flights: 0€"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textHotelsResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏨 Hotels: 0€"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textFoodResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍔 Food: 0€"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/textActivitiesResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎯 Activities: 0€"
+                android:textColor="#222222"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymSphere">
         <activity
+            android:name=".activities.DocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HotelsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FlightsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PackingActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.BudgetActivity"
             android:exported="false" />
         <activity
